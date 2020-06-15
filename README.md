@@ -1,5 +1,7 @@
 # Dynamic Components
 
+>Les composants dynamiques nous permettent de changer dynamiquement quel composant est sorti dans le navigateur. En utilisant la balise 'component' que nous fournit Vue JS. 
+
 ## Project setup
 ```
 yarn install
