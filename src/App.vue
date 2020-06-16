@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <keep-alive>
+      <component :is="component"></component>
+    </keep-alive>
+    
+    <button @click="component = 'form-one'">Show form one</button>
+    <button @click="component = 'form-two'">Show form two</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import formOne from './components/formOne'
+import formTwo from './components/formTwo'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'form-one': formOne,
+    'form-two': formTwo,
+  },
+  data () {
+    return {
+      component: 'form-one'
+    }
   }
 }
 </script>
